@@ -1,0 +1,139 @@
+================================================================================
+               LANGCHAIN ACADEMY - COMPLETE LESSON ROADMAP
+================================================================================
+
+MODULE 0: GETTING STARTED & BASICS
+--------------------------------------------------------------------------------
+1. module-0/basics.ipynb
+   - Lesson: Chat Models & Invocations
+   - Concepts: Initializing models, .invoke(), passing messages, Tavily search basics.
+
+MODULE 1: INTRODUCTION TO LANGGRAPH (THE CORE ENGINE)
+--------------------------------------------------------------------------------
+1. module-1/simple-graph.ipynb
+   - Lesson 2: Simple Graph
+   - Concepts: State, TypedDict, Nodes, Edges, Conditional Edges, .compile(), .invoke().
+
+2. module-1/chain.ipynb
+   - Lesson 3: Sequential Chains
+   - Concepts: Chaining multiple LLMs in a pipeline, passing state sequentially.
+
+3. module-1/router.ipynb
+   - Lesson 4: Tool Routing
+   - Concepts: LLM tool binding, 1-step conditional decisions (Tool vs Direct Answer).
+
+4. module-1/agent.ipynb
+   - Lesson 5: ReAct Agent Loop
+   - Concepts: Cyclic feedback loops (LLM -> ToolNode -> LLM), agent reasoning.
+
+5. module-1/agent-memory.ipynb
+   - Lesson 6: Agent with Memory
+   - Concepts: MemorySaver checkpointer, thread_id, continuing conversations.
+
+6. module-1/deployment.ipynb
+   - Lesson 7: Deployment
+   - Concepts: Compiling graphs for local servers and LangGraph Studio.
+
+MODULE 2: STATE MANAGEMENT & ADVANCED MEMORY
+--------------------------------------------------------------------------------
+1. module-2/state-schema.ipynb
+   - Lesson 1: State Schema
+   - Concepts: Designing custom State structures, required vs optional fields.
+
+2. module-2/state-reducers.ipynb
+   - Lesson 2: State Reducers
+   - Concepts: Annotated, add_messages reducer, auto-appending chat histories.
+
+3. module-2/multiple-schemas.ipynb
+   - Lesson 3: Multiple Schemas
+   - Concepts: Input Schema vs Output Schema vs Internal State separation.
+
+4. module-2/trim-filter-messages.ipynb
+   - Lesson 4: Trim & Filter Messages
+   - Concepts: Managing LLM context windows, token limits, removing old messages.
+
+5. module-2/chatbot-summarization.ipynb
+   - Lesson 5: Chatbot with Summarization
+   - Concepts: Condensing long conversation histories into running summaries.
+
+6. module-2/chatbot-external-memory.ipynb
+   - Lesson 6: Persistent External Memory
+   - Concepts: Saving graph checkpoints to SQLite databases across restarts.
+
+MODULE 3: HUMAN-IN-THE-LOOP (HITL) & INTERRUPTIONS
+--------------------------------------------------------------------------------
+1. module-3/streaming-interruption.ipynb
+   - Lesson 1: Streaming
+   - Concepts: Real-time token streaming and state change updates.
+
+2. module-3/breakpoints.ipynb
+   - Lesson 2: Static Breakpoints
+   - Concepts: Pausing graph execution before critical tool nodes (e.g. payments).
+
+3. module-3/edit-state-human-feedback.ipynb
+   - Lesson 3: Editing State & Human Overrides
+   - Concepts: Human modifying state while graph is paused, then resuming.
+
+4. module-3/dynamic-breakpoints.ipynb
+   - Lesson 4: Dynamic Breakpoints
+   - Concepts: Raising NodeInterrupt conditionally based on runtime logic.
+
+5. module-3/time-travel.ipynb
+   - Lesson 5: Time Travel & State Replay
+   - Concepts: Rewinding execution history to a past state and forking branches.
+
+MODULE 4: MULTI-AGENT ARCHITECTURES & PARALLEL EXECUTION
+--------------------------------------------------------------------------------
+1. module-4/parallelization.ipynb
+   - Lesson 1: Parallel Node Execution
+   - Concepts: Running multiple independent LLMs/tools at the exact same time.
+
+2. module-4/sub-graph.ipynb
+   - Lesson 2: Sub-Graphs
+   - Concepts: Embedding isolated sub-agent graphs inside a parent coordinator.
+
+3. module-4/map-reduce.ipynb
+   - Lesson 3: Map-Reduce
+   - Concepts: Fan-out parallel processing over lists of documents / topics.
+
+4. module-4/research-assistant.ipynb
+   - Lesson 4: Multi-Agent Research Assistant
+   - Concepts: Capstone project combining Supervisor + Researcher + Writer agents.
+
+MODULE 5: LONG-TERM CROSS-THREAD MEMORY
+--------------------------------------------------------------------------------
+1. module-5/memory_store.ipynb
+   - Lesson 1: Key-Value Memory Store
+   - Concepts: Sharing memory across different conversation threads & users.
+
+2. module-5/memoryschema_profile.ipynb
+   - Lesson 2: User Profile Memory
+   - Concepts: Storing and updating user preferences and behavioral profiles.
+
+3. module-5/memoryschema_collection.ipynb
+   - Lesson 3: Collection Memory Schema
+   - Concepts: Storing lists of memories, facts, and semantic recall.
+
+4. module-5/memory_agent.ipynb
+   - Lesson 4: Autonomous Memory Agent
+   - Concepts: Agent that decides when and what to write into long-term memory.
+
+MODULE 6: PRODUCTION & DEPLOYMENT
+--------------------------------------------------------------------------------
+1. module-6/creating.ipynb
+   - Lesson 1: Creating a Deployment
+   - Concepts: langgraph.json, environment variables, Docker container setup.
+
+2. module-6/connecting.ipynb
+   - Lesson 2: Connecting to LangGraph Server
+   - Concepts: Using the LangGraph Python SDK to query remote deployed graphs.
+
+3. module-6/assistant.ipynb
+   - Lesson 3: Multi-tenant Assistants
+   - Concepts: Supplying runtime configurations and model overrides per user.
+
+4. module-6/double-texting.ipynb
+   - Lesson 4: Concurrency & Double Texting
+   - Concepts: Handling rapid, concurrent user messages cleanly.
+
+================================================================================

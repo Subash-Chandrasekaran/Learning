@@ -1,0 +1,30 @@
+[project]
+name = "ai-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=1.5.9",
+    "groq>=0.37.1",
+    "langchain>=1.3.17",
+    "langchain-community>=0.4.2",
+    "langchain-groq>=1.1.3",
+    "langchain-openai>=1.6.0",
+    "langchainhub>=0.1.21",
+    "langgraph>=1.2.11",
+    "openai>=3.3.1",
+    "tiktoken>=0.14.0",
+]
+
+[project.scripts]
+ai-project = "ai_project:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "langchain-academy",
+]
