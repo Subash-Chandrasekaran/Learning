@@ -1,0 +1,16 @@
+{
+  "name": "system-dashboard-server",
+  "version": "1.0.0",
+  "description": "Backend API for System, Extension & Ollama Resource Dashboard",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "systeminformation": "^5.24.1"
+  }
+}
